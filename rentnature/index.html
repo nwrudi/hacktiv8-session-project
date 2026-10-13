@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureBound Rentals | Cheerful Outdoor & Hiking Gear Rental Yogyakarta & Banten</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#b33939',
+                            'red-hover': '#962d2d',
+                            green: '#10b981',
+                            'green-hover': '#059669',
+                            emerald: '#059669',
+                            lime: '#84cc16',
+                            amber: '#f59e0b',
+                            amberLight: '#fef3c7',
+                            bgLight: '#f4fbf7',
+                            cardLight: '#ffffff',
+                            glassBorder: 'rgba(16, 185, 129, 0.2)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft-green': '0 10px 30px -5px rgba(16, 185, 129, 0.2)',
+                        'soft-red': '0 10px 30px -5px rgba(179, 57, 57, 0.25)',
+                        'soft-amber': '0 10px 30px -5px rgba(245, 158, 11, 0.25)',
+                        'card-glow': '0 15px 35px -5px rgba(16, 185, 129, 0.12), 0 5px 15px -3px rgba(0, 0, 0, 0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4fbf7;
+            color: #1f2937;
+            overflow-x: hidden;
+        }
+
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .glass-nav-light {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #eef7f2;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #10b981;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #059669;
+        }
+    </style>
+</head>
+
+<body
+    class="antialiased selection:bg-brand-green selection:text-white bg-gradient-to-b from-emerald-50/50 via-teal-50/30 to-amber-50/40">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav-light transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div
+                    class="w-11 h-11 rounded-2xl bg-gradient-to-br from-brand-red via-brand-amber to-brand-green flex items-center justify-center shadow-soft-green group-hover:scale-105 transition-transform">
+                    <i data-lucide="sun" class="w-6 h-6 text-white animate-spin-slow"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-emerald-950 block leading-none">NATURE<span
+                            class="text-brand-green">BOUND</span></span>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-red font-bold">Outdoor Rentals
+                        Yogyakarta</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                <a href="#hero"
+                    class="text-gray-700 hover:text-brand-green transition-colors flex items-center gap-1.5"><i
+                        data-lucide="home" class="w-4 h-4 text-brand-green"></i> Home</a>
+                <a href="#gear"
+                    class="text-gray-700 hover:text-brand-green transition-colors flex items-center gap-1.5"><i
+                        data-lucide="tent" class="w-4 h-4 text-brand-amber"></i> Rental Gear</a>
+                <a href="#guides"
+                    class="text-gray-700 hover:text-brand-green transition-colors flex items-center gap-1.5"><i
+                        data-lucide="smile" class="w-4 h-4 text-brand-red"></i> Outdoor Crew</a>
+                <a href="#branches"
+                    class="text-gray-700 hover:text-brand-green transition-colors flex items-center gap-1.5"><i
+                        data-lucide="map-pin" class="w-4 h-4 text-brand-green"></i> Hub Branches</a>
+                <a href="#about"
+                    class="text-gray-700 hover:text-brand-green transition-colors flex items-center gap-1.5"><i
+                        data-lucide="heart" class="w-4 h-4 text-brand-red"></i> About Us</a>
+            </nav>
+
+            <!-- WhatsApp & AI Chatbot Direct CTA Actions -->
+            <div class="hidden md:flex items-center space-x-3">
+                <button type="button" onclick="openFloatingChat(event)"
+                    class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs tracking-wider uppercase shadow-soft-green hover:scale-105 transition-all flex items-center gap-1.5 cursor-pointer">
+                    <i data-lucide="bot" class="w-4 h-4"></i>
+                    AI Chatbot
+                </button>
+                <a href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20want%20to%20book%20equipment%20now."
+                    target="_blank"
+                    class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-red to-rose-600 hover:opacity-95 text-white font-extrabold text-xs tracking-wider uppercase shadow-soft-red hover:scale-105 transition-all flex items-center gap-1.5">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    Book via WA
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn"
+                class="md:hidden p-2 rounded-xl text-emerald-950 hover:bg-emerald-100/60 transition-colors">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu"
+            class="hidden md:hidden glass-card-light border-t border-brand-green/20 px-4 pt-3 pb-6 space-y-3">
+            <a href="#hero"
+                class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-800 hover:bg-emerald-50 hover:text-brand-green">Home</a>
+            <a href="#gear"
+                class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-800 hover:bg-emerald-50 hover:text-brand-green">Rental
+                Gear</a>
+            <a href="#guides"
+                class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-800 hover:bg-emerald-50 hover:text-brand-green">Outdoor
+                Crew</a>
+            <a href="#branches"
+                class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-800 hover:bg-emerald-50 hover:text-brand-green">Branches</a>
+            <a href="#about"
+                class="block px-3 py-2 rounded-lg text-sm font-semibold text-gray-800 hover:bg-emerald-50 hover:text-brand-green">About
+                Us</a>
+            <button type="button" onclick="openFloatingChat(event)"
+                class="block w-full text-center py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm shadow-soft-green cursor-pointer">
+                <i data-lucide="bot" class="inline w-4 h-4 mr-1"></i> Tanya AI Chatbot
+            </button>
+            <a href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20would%20like%20to%20inquire%20about%20camping%20gear%20rental."
+                target="_blank"
+                class="block w-full text-center py-3 rounded-xl bg-brand-green text-white font-bold text-sm shadow-soft-green">
+                <i data-lucide="message-circle" class="inline w-4 h-4 mr-1"></i> Chat via WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 lg:pt-36 lg:pb-28 overflow-hidden">
+        <!-- Bright Sunlit Background Gradients & Blobs -->
+        <div
+            class="absolute top-12 left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-gradient-to-tr from-emerald-200/50 via-lime-200/40 to-amber-200/50 rounded-full blur-[110px] pointer-events-none">
+        </div>
+        <div class="absolute bottom-0 right-10 w-96 h-96 bg-amber-200/50 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div class="absolute top-20 left-10 w-80 h-80 bg-rose-200/40 rounded-full blur-[90px] pointer-events-none">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100/90 border border-brand-green/30 text-emerald-900 text-xs font-bold uppercase tracking-wider shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse"></span>
+                        Bright Sunny Adventures • Jogja HQ & 3 Banten Hubs
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-black text-gray-900 tracking-tight leading-tight">
+                        EXPLORE THE OUTDOORS WITH <br>
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-brand-green via-teal-600 to-brand-amber">
+                            CHEERFUL & TRUSTED
+                        </span> <br>
+                        CAMPING GEAR
+                    </h1>
+
+                    <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                        Sanitized, lightweight, and weather-tested camping and hiking equipment rental in Yogyakarta &
+                        Banten. Quick WhatsApp booking, friendly mountain guides, and zero hassle!
+                    </p>
+
+                    <!-- Feature Badges -->
+                    <div
+                        class="pt-1 flex flex-wrap gap-3 justify-center lg:justify-start text-xs font-bold text-emerald-950">
+                        <span
+                            class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white shadow-sm border border-emerald-100">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-brand-green"></i> Freshly Sanitized
+                        </span>
+                        <span
+                            class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white shadow-sm border border-emerald-100">
+                            <i data-lucide="truck" class="w-4 h-4 text-brand-amber"></i> Campsite Delivery
+                        </span>
+                        <span
+                            class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white shadow-sm border border-emerald-100">
+                            <i data-lucide="smile" class="w-4 h-4 text-brand-red"></i> Friendly Crew
+                        </span>
+                    </div>
+
+                    <!-- Direct WA CTAs -->
+                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20would%20like%20to%20inquire%20about%20camping%20gear%20rental."
+                            target="_blank"
+                            class="px-8 py-4 rounded-2xl bg-brand-green hover:bg-brand-green-hover text-white font-extrabold text-sm uppercase tracking-wider shadow-soft-green hover:scale-105 transition-all flex items-center gap-2.5">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            WhatsApp Desk
+                        </a>
+                        <a href="#gear"
+                            class="px-6 py-4 rounded-2xl bg-white hover:bg-emerald-50 text-gray-800 font-bold text-sm border border-emerald-200 shadow-sm transition-all flex items-center gap-2">
+                            <i data-lucide="tent" class="w-5 h-5 text-brand-amber"></i>
+                            Browse Gear Catalog
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Quick Search Form -->
+                <div class="lg:col-span-5">
+                    <div
+                        class="glass-card-light rounded-3xl p-6 sm:p-8 shadow-card-glow relative border-brand-green/30">
+                        <div
+                            class="absolute -top-3 right-6 px-3.5 py-1 bg-brand-amber text-emerald-950 font-black text-xs uppercase tracking-wider rounded-lg shadow-soft-amber">
+                            Instant Estimate
+                        </div>
+
+                        <h3 class="text-xl font-extrabold text-gray-900 mb-1 flex items-center gap-2">
+                            <i data-lucide="calendar" class="w-5 h-5 text-brand-green"></i>
+                            Quick Gear Calculator
+                        </h3>
+                        <p class="text-xs text-gray-500 mb-6">Select equipment category and rental dates for instant
+                            WhatsApp confirmation.</p>
+
+                        <form id="heroQuickForm" onsubmit="event.preventDefault(); triggerQuickSearch();"
+                            class="space-y-4">
+                            <div>
+                                <label
+                                    class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Equipment
+                                    Category</label>
+                                <select id="heroCategorySelect"
+                                    class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-brand-green transition-colors">
+                                    <option value="all">All Categories (Tents, Packs, Stoves)</option>
+                                    <option value="tents">Tents & Shelter</option>
+                                    <option value="backpacks">Backpacks & Carrying</option>
+                                    <option value="cooking">Cooking & Hydration</option>
+                                    <option value="electronics">Power & Lighting</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label
+                                    class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Pick-up
+                                    / Delivery Hub</label>
+                                <select id="heroBranchSelect"
+                                    class="w-full bg-white border border-emerald-200 rounded-xl px-4 py-3 text-sm text-gray-800 focus:outline-none focus:border-brand-green transition-colors">
+                                    <option value="jogja">Main HQ - Sleman, Yogyakarta</option>
+                                    <option value="tangerang">Tangerang Forest Hub (Banten)</option>
+                                    <option value="anyer">Anyer Coastal Station (Banten)</option>
+                                    <option value="karang">Mount Karang Basecamp (Banten)</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Start
+                                        Date</label>
+                                    <input type="date" id="heroStartDate"
+                                        class="w-full bg-white border border-emerald-200 rounded-xl px-3 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-brand-green">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Return
+                                        Date</label>
+                                    <input type="date" id="heroEndDate"
+                                        class="w-full bg-white border border-emerald-200 rounded-xl px-3 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-brand-green">
+                                </div>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-green to-teal-600 text-white font-black text-xs uppercase tracking-wider hover:opacity-95 transition-all shadow-soft-green flex items-center justify-center gap-2 mt-2">
+                                <i data-lucide="search" class="w-4 h-4"></i>
+                                View Available Gear
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Gear Section -->
+    <section id="gear" class="py-20 relative bg-white/70 border-t border-b border-emerald-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span
+                    class="px-3.5 py-1.5 rounded-full bg-amber-100 text-amber-900 font-bold text-xs uppercase tracking-widest inline-block mb-3 border border-amber-200">
+                    Sunlit Trail Ready
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
+                    POPULAR CAMPING & HIKING GEAR
+                </h2>
+                <p class="text-gray-600 mt-3 text-sm sm:text-base font-medium">
+                    10 premium outdoor units maintained with non-toxic UV sterilization after every trip.
+                </p>
+
+                <!-- Category Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-2.5 mt-8" id="filterTabs">
+                    <button onclick="filterCategory('all')"
+                        class="filter-btn active px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all bg-brand-green text-white shadow-soft-green"
+                        data-cat="all">All Gear</button>
+                    <button onclick="filterCategory('tents')"
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all bg-white text-gray-700 hover:text-brand-green border border-emerald-200"
+                        data-cat="tents">Tents & Shelter</button>
+                    <button onclick="filterCategory('backpacks')"
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all bg-white text-gray-700 hover:text-brand-green border border-emerald-200"
+                        data-cat="backpacks">Packs & Bags</button>
+                    <button onclick="filterCategory('cooking')"
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all bg-white text-gray-700 hover:text-brand-green border border-emerald-200"
+                        data-cat="cooking">Kitchen & Stove</button>
+                    <button onclick="filterCategory('electronics')"
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all bg-white text-gray-700 hover:text-brand-green border border-emerald-200"
+                        data-cat="electronics">Power & Lights</button>
+                </div>
+            </div>
+
+            <!-- Gear Grid Container -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="gearContainer">
+                <!-- Dynamically populated by JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Outdoor Guides / Drivers Section -->
+    <section id="guides" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="px-3.5 py-1.5 rounded-full bg-emerald-100 text-brand-green font-bold text-xs uppercase tracking-widest inline-block mb-3 border border-emerald-200">
+                    Friendly Expedition Personnel
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-1">
+                    MEET OUR OUTDOOR DRIVERS & GUIDES
+                </h2>
+                <p class="text-gray-600 mt-2 text-sm sm:text-base">
+                    Experienced drivers & trek leaders who ensure safe delivery to trailheads and camp setup assistance.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Guide 1 -->
+                <div
+                    class="glass-card-light rounded-3xl p-6 relative group hover:border-brand-green transition-all duration-300 shadow-card-glow">
+                    <div class="relative h-64 rounded-2xl overflow-hidden mb-5">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+                            alt="Guide 1"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute top-3 right-3 px-3 py-1 bg-brand-green text-white text-xs font-bold rounded-lg shadow-sm">
+                            Master Navigator
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-gray-900">Bagus "Rimba" Santoso</h3>
+                    <div class="text-xs text-brand-emerald font-bold mb-3">Senior Off-Road Driver & Trek Leader</div>
+                    <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                        12+ years experience navigating Merapi mountain trails and Mount Karang basecamps. Certified in
+                        Wilderness First Aid & 4x4 recovery.
+                    </p>
+                    <div
+                        class="flex items-center justify-between text-xs pt-3 border-t border-emerald-100 text-gray-500">
+                        <span><i data-lucide="shield" class="inline w-3.5 h-3.5 text-brand-amber"></i> 450+
+                            Expeditions</span>
+                        <span class="text-brand-green font-bold">Rating 4.98 / 5</span>
+                    </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div
+                    class="glass-card-light rounded-3xl p-6 relative group hover:border-brand-green transition-all duration-300 shadow-card-glow">
+                    <div class="relative h-64 rounded-2xl overflow-hidden mb-5">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+                            alt="Guide 2"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute top-3 right-3 px-3 py-1 bg-brand-amber text-emerald-950 text-xs font-bold rounded-lg shadow-sm">
+                            Gear Specialist
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-gray-900">Diana Prasetyo</h3>
+                    <div class="text-xs text-brand-amber font-bold mb-3">Ultralight Expedition Consultant</div>
+                    <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                        Alpine enthusiast specializing in lightweight gear configurations, tent setup instruction, and
+                        high-altitude electronics setup.
+                    </p>
+                    <div
+                        class="flex items-center justify-between text-xs pt-3 border-t border-emerald-100 text-gray-500">
+                        <span><i data-lucide="award" class="inline w-3.5 h-3.5 text-brand-green"></i> Ultralight
+                            Expert</span>
+                        <span class="text-brand-green font-bold">Rating 5.0 / 5</span>
+                    </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div
+                    class="glass-card-light rounded-3xl p-6 relative group hover:border-brand-green transition-all duration-300 shadow-card-glow">
+                    <div class="relative h-64 rounded-2xl overflow-hidden mb-5">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+                            alt="Guide 3"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute top-3 right-3 px-3 py-1 bg-brand-red text-white text-xs font-bold rounded-lg shadow-sm">
+                            Coastal & Trail Driver
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-gray-900">Andri "Godean" Wijaya</h3>
+                    <div class="text-xs text-brand-red font-bold mb-3">Logistics Driver & Anyer Base Manager</div>
+                    <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                        Expert in equipment transport and coastal camping setups. Ensures gear delivery straight to your
+                        campsite across Banten & Sleman.
+                    </p>
+                    <div
+                        class="flex items-center justify-between text-xs pt-3 border-t border-emerald-100 text-gray-500">
+                        <span><i data-lucide="truck" class="inline w-3.5 h-3.5 text-brand-green"></i> Rapid
+                            Transport</span>
+                        <span class="text-brand-green font-bold">Rating 4.95 / 5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-emerald-50/60 border-t border-b border-emerald-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-brand-green font-bold text-xs uppercase tracking-widest">Happy Campers</span>
+                <h2 class="text-3xl font-black text-gray-900 mt-1">WHAT EXPLORERS SAY ABOUT US</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="glass-card-light p-6 rounded-2xl space-y-4 shadow-sm border-emerald-200">
+                    <div class="flex text-amber-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed italic">
+                        "Rented the Expedition 4P tent and stove for our Mount Merbabu climb. Gear was sparkling clean,
+                        smelled fresh, and kept us warm during night rain!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80"
+                            class="w-10 h-10 rounded-full object-cover border-2 border-brand-green">
+                        <div>
+                            <div class="text-sm font-bold text-gray-900">Rian Hidayat</div>
+                            <div class="text-[10px] text-gray-500">Yogyakarta Hiker</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-card-light p-6 rounded-2xl space-y-4 shadow-sm border-emerald-200">
+                    <div class="flex text-amber-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed italic">
+                        "The WhatsApp booking process took less than 2 minutes! We had the tent delivered directly to
+                        Anyer beach. Amazing service!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+                            class="w-10 h-10 rounded-full object-cover border-2 border-brand-green">
+                        <div>
+                            <div class="text-sm font-bold text-gray-900">Siti Nurhaliza</div>
+                            <div class="text-[10px] text-gray-500">Coastal Camper (Banten)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-card-light p-6 rounded-2xl space-y-4 shadow-sm border-emerald-200">
+                    <div class="flex text-amber-500">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed italic">
+                        "The 500W Portable Power Station saved our night photography shoot on Mount Karang. Friendly
+                        staff and fair daily prices!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80"
+                            class="w-10 h-10 rounded-full object-cover border-2 border-brand-green">
+                        <div>
+                            <div class="text-sm font-bold text-gray-900">Kevin Tan</div>
+                            <div class="text-[10px] text-gray-500">Landscape Photographer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branch Locations Section -->
+    <section id="branches" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-green font-bold text-xs uppercase tracking-widest">HQ & Regional Service
+                    Stations</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-1">OUR REGIONAL EXPEDITION HUBS</h2>
+                <p class="text-gray-600 text-sm mt-2">Pick up your gear at HQ in Sleman, Yogyakarta or at our 3 key
+                    stations across Banten province.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Main HQ Yogyakarta -->
+                <div
+                    class="glass-card-light rounded-2xl p-5 border-brand-red/50 hover:border-brand-red transition-all relative shadow-sm">
+                    <div
+                        class="inline-block px-2.5 py-1 bg-brand-red text-white text-[10px] font-extrabold uppercase rounded mb-3">
+                        Headquarters</div>
+                    <h3 class="text-lg font-extrabold text-gray-900 mb-1">Main HQ Sleman</h3>
+                    <p class="text-xs text-gray-600 mb-3 flex items-start gap-1">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-red shrink-0 mt-0.5"></i>
+                        Jl Pasar Godean No 19 Sidoagung, Godean Sleman Yogyakarta
+                    </p>
+                    <div class="text-[11px] text-gray-500 space-y-1 mb-4 border-t border-emerald-100 pt-3">
+                        <div><strong class="text-gray-900">Hours:</strong> 07:00 - 21:00 WIB Daily</div>
+                        <div><strong class="text-gray-900">Phone/WA:</strong> 085208990812</div>
+                    </div>
+                    <a href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20want%20to%20pick%20up%20gear%20at%20Main%20HQ%20Sleman."
+                        target="_blank"
+                        class="w-full py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-brand-green text-xs font-bold flex items-center justify-center gap-1 border border-emerald-200">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Contact Sleman Hub
+                    </a>
+                </div>
+
+                <!-- Banten Branch 1 -->
+                <div class="glass-card-light rounded-2xl p-5 hover:border-brand-green transition-all shadow-sm">
+                    <div
+                        class="inline-block px-2.5 py-1 bg-emerald-100 text-brand-green text-[10px] font-extrabold uppercase rounded mb-3 border border-emerald-200">
+                        Banten Hub 1</div>
+                    <h3 class="text-lg font-extrabold text-gray-900 mb-1">Tangerang Forest Hub</h3>
+                    <p class="text-xs text-gray-600 mb-3 flex items-start gap-1">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+                        Jl. Raya Serpong No. 88, BSD City, Tangerang, Banten
+                    </p>
+                    <div class="text-[11px] text-gray-500 space-y-1 mb-4 border-t border-emerald-100 pt-3">
+                        <div><strong class="text-gray-900">Hours:</strong> 08:00 - 20:00 WIB</div>
+                        <div><strong class="text-gray-900">Phone:</strong> 085208990812 (Ext 1)</div>
+                    </div>
+                    <a href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20want%20to%20pick%20up%20gear%20at%20Tangerang%20Forest%20Hub."
+                        target="_blank"
+                        class="w-full py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-brand-green text-xs font-bold flex items-center justify-center gap-1 border border-emerald-200">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Contact Tangerang Hub
+                    </a>
+                </div>
+
+                <!-- Banten Branch 2 -->
+                <div class="glass-card-light rounded-2xl p-5 hover:border-brand-green transition-all shadow-sm">
+                    <div
+                        class="inline-block px-2.5 py-1 bg-emerald-100 text-brand-green text-[10px] font-extrabold uppercase rounded mb-3 border border-emerald-200">
+                        Banten Hub 2</div>
+                    <h3 class="text-lg font-extrabold text-gray-900 mb-1">Anyer Coastal Station</h3>
+                    <p class="text-xs text-gray-600 mb-3 flex items-start gap-1">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+                        Jl. Raya Anyer Km 125, Cinangka, Serang, Banten
+                    </p>
+                    <div class="text-[11px] text-gray-500 space-y-1 mb-4 border-t border-emerald-100 pt-3">
+                        <div><strong class="text-gray-900">Hours:</strong> 06:00 - 22:00 WIB</div>
+                        <div><strong class="text-gray-900">Phone:</strong> 085208990812 (Ext 2)</div>
+                    </div>
+                    <a href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20want%20to%20pick%20up%20gear%20at%20Anyer%20Coastal%20Station."
+                        target="_blank"
+                        class="w-full py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-brand-green text-xs font-bold flex items-center justify-center gap-1 border border-emerald-200">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Contact Anyer Hub
+                    </a>
+                </div>
+
+                <!-- Banten Branch 3 -->
+                <div class="glass-card-light rounded-2xl p-5 hover:border-brand-green transition-all shadow-sm">
+                    <div
+                        class="inline-block px-2.5 py-1 bg-emerald-100 text-brand-green text-[10px] font-extrabold uppercase rounded mb-3 border border-emerald-200">
+                        Banten Hub 3</div>
+                    <h3 class="text-lg font-extrabold text-gray-900 mb-1">Mount Karang Basecamp</h3>
+                    <p class="text-xs text-gray-600 mb-3 flex items-start gap-1">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-green shrink-0 mt-0.5"></i>
+                        Jl. Kadu Kancana No. 14, Pandeglang, Banten
+                    </p>
+                    <div class="text-[11px] text-gray-500 space-y-1 mb-4 border-t border-emerald-100 pt-3">
+                        <div><strong class="text-gray-900">Hours:</strong> 24/7 Trailhead Access</div>
+                        <div><strong class="text-gray-900">Phone:</strong> 085208990812 (Ext 3)</div>
+                    </div>
+                    <a href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20want%20to%20pick%20up%20gear%20at%20Mount%20Karang%20Basecamp."
+                        target="_blank"
+                        class="w-full py-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-brand-green text-xs font-bold flex items-center justify-center gap-1 border border-emerald-200">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Contact Mt. Karang Hub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white/80 border-t border-emerald-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-brand-green font-bold text-xs uppercase tracking-widest">Our Mission &
+                        Values</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-gray-900 leading-tight">
+                        ACCESSIBLE, SUSTAINABLE & FUN OUTDOOR EXPEDITIONS
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        Based in Godean, Sleman Yogyakarta, <strong class="text-gray-900">NatureBound Rentals</strong>
+                        provides top-quality camping gear without the steep cost of purchasing high-end gear. We prepare
+                        clean, reliable equipment for hikers, campers, and outdoor lovers across Yogyakarta and Banten.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="glass-card-light p-4 rounded-2xl border-l-4 border-l-brand-green shadow-sm">
+                            <div class="text-2xl font-black text-gray-900">100%</div>
+                            <div class="text-xs text-gray-500">Sanitized & Checked</div>
+                        </div>
+                        <div class="glass-card-light p-4 rounded-2xl border-l-4 border-l-brand-amber shadow-sm">
+                            <div class="text-2xl font-black text-gray-900">10 Units</div>
+                            <div class="text-xs text-gray-500">High-Performance Outdoor Gear</div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-500 italic">
+                        "Leave No Trace, Take Only Memories." — Every rental package includes eco-friendly trash bags
+                        and gear maintenance instructions.
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <div class="glass-card-light rounded-3xl p-4 overflow-hidden shadow-card-glow border-emerald-200">
+                        <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=1000&q=80"
+                            alt="Outdoor Camping" class="rounded-2xl object-cover w-full h-[360px]">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6 rounded-2xl">
+                            <div class="text-white">
+                                <div class="text-xs text-brand-amber font-bold uppercase tracking-wider">NatureBound
+                                    Central HQ</div>
+                                <div class="text-base font-bold">Jl Pasar Godean No 19 Sidoagung, Sleman, Yogyakarta
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section (Direct WhatsApp link focus) -->
+    <section id="contact" class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="glass-card-light rounded-3xl p-8 sm:p-12 relative overflow-hidden border-brand-green/30 bg-gradient-to-r from-emerald-500 via-teal-600 to-emerald-700 text-white shadow-soft-green">
+                <div class="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div class="lg:col-span-8 space-y-4 text-center lg:text-left">
+                        <span
+                            class="px-3 py-1 rounded-full bg-white/20 text-white font-bold text-xs uppercase tracking-widest inline-block">
+                            Instant WhatsApp Reservation
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-black tracking-tight">READY FOR YOUR NEXT OUTDOOR
+                            ADVENTURE?</h2>
+                        <p class="text-emerald-50 text-sm max-w-2xl leading-relaxed">
+                            Click below to open WhatsApp directly with our gear desk at <strong>085208990812</strong>.
+                            Get instant availability, custom package pricing, and campsite delivery options!
+                        </p>
+                    </div>
+
+                    <div class="lg:col-span-4 flex flex-col items-center lg:items-end justify-center">
+                        <a href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20would%20like%20to%20inquire%20about%20camping%20gear%20rental."
+                            target="_blank"
+                            class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white hover:bg-emerald-50 text-emerald-950 font-black text-sm uppercase tracking-wider shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-3">
+                            <i data-lucide="message-circle" class="w-6 h-6 text-brand-green fill-current"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <span class="text-[11px] text-emerald-100 mt-2 font-medium">Fast reply within 5 minutes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-emerald-100 py-12 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="sun" class="w-5 h-5 text-brand-amber"></i>
+                        <span class="text-base font-black text-white">NATUREBOUND</span>
+                    </div>
+                    <p class="text-emerald-200/80 leading-relaxed mb-3">
+                        Cheerful camping & outdoor gear rental headquartered in Godean Sleman Yogyakarta, with active
+                        basecamps across Banten.
+                    </p>
+                    <p class="text-brand-amber font-bold">Jl Pasar Godean No 19 Sidoagung, Sleman, DIY</p>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Gear Categories</h5>
+                    <ul class="space-y-2 text-emerald-200/80">
+                        <li><a href="#gear" class="hover:text-white transition-colors">Tents & Shelter</a></li>
+                        <li><a href="#gear" class="hover:text-white transition-colors">Backpacks & Carrying</a></li>
+                        <li><a href="#gear" class="hover:text-white transition-colors">Cooking & Stoves</a></li>
+                        <li><a href="#gear" class="hover:text-white transition-colors">Portable Power Stations</a></li>
+                        <li><a href="#gear" class="hover:text-white transition-colors">Sleeping Bags & Mats</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Regional Hubs</h5>
+                    <ul class="space-y-2 text-emerald-200/80">
+                        <li><a href="#branches" class="hover:text-white transition-colors">Main Sleman HQ
+                                (Yogyakarta)</a></li>
+                        <li><a href="#branches" class="hover:text-white transition-colors">Tangerang Forest Hub
+                                (Banten)</a></li>
+                        <li><a href="#branches" class="hover:text-white transition-colors">Anyer Coastal Station
+                                (Banten)</a></li>
+                        <li><a href="#branches" class="hover:text-white transition-colors">Mount Karang Basecamp
+                                (Banten)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Direct WhatsApp Contact
+                    </h5>
+                    <p class="mb-2">Phone / WA: <a
+                            href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20would%20like%20to%20inquire%20about%20camping%20gear%20rental."
+                            target="_blank" class="text-brand-amber font-bold underline">085208990812</a></p>
+                    <p class="mb-2">Email: <strong class="text-white">hello@naturebound.id</strong></p>
+                    <p class="text-emerald-300 font-semibold">Service Hours: 07:00 - 21:00 WIB Daily</p>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-emerald-900 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-emerald-300/80">
+                <div>&copy; 2026 NatureBound Rentals. All rights reserved. Made for sunny adventures.</div>
+                <div class="flex space-x-4">
+                    <a href="https://wa.me/6285208990812?text=Hello%20NatureBound%20Rentals%2C%20I%20have%20a%20question."
+                        target="_blank" class="hover:text-white">Support WA</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Rent / Checkout Modal -->
+    <div id="bookingModal"
+        class="fixed inset-0 z-50 bg-gray-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div
+            class="glass-card-light rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border-brand-green/40 p-6 sm:p-8 relative shadow-2xl bg-white">
+            <!-- Modal Close Button -->
+            <button onclick="closeModal()"
+                class="absolute top-5 right-5 text-gray-500 hover:text-gray-900 p-2 rounded-xl bg-gray-100">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="flex items-center gap-3 mb-6 border-b border-gray-100 pb-4">
+                <div
+                    class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center border border-emerald-200">
+                    <i data-lucide="tent" class="w-6 h-6 text-brand-green"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-extrabold text-gray-900">Gear Rental Reservation</h3>
+                    <p class="text-xs text-gray-500">Calculate rental duration & confirm via WhatsApp</p>
+                </div>
+            </div>
+
+            <!-- Modal Body Form -->
+            <form id="modalCheckoutForm" onsubmit="event.preventDefault(); processCheckout();" class="space-y-6">
+                <!-- Selected Gear Preview -->
+                <div class="bg-emerald-50/80 p-4 rounded-2xl border border-emerald-200 flex items-center gap-4">
+                    <img id="modalGearImg" src="" alt="Selected Gear"
+                        class="w-20 h-20 object-cover rounded-xl border border-emerald-300">
+                    <div>
+                        <span id="modalGearCategory"
+                            class="text-[10px] font-extrabold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-md">Category</span>
+                        <h4 id="modalGearTitle" class="text-base font-extrabold text-gray-900 mt-1">Gear Name</h4>
+                        <div class="text-xs text-brand-green font-black mt-0.5">
+                            <span id="modalGearPrice">Rp 0</span> / day
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Date Range Selection (Calendar Dynamic Calculator) -->
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Pickup
+                            Date</label>
+                        <input type="date" id="modalStartDate" onchange="calculateTotal()" required
+                            class="w-full bg-white border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-brand-green">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Return
+                            Date</label>
+                        <input type="date" id="modalEndDate" onchange="calculateTotal()" required
+                            class="w-full bg-white border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-brand-green">
+                    </div>
+                </div>
+
+                <!-- Quantity & Branch Selector -->
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Quantity
+                            (Units)</label>
+                        <input type="number" id="modalQty" min="1" max="10" value="1" onchange="calculateTotal()"
+                            class="w-full bg-white border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-brand-green">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1">Pick-up
+                            Location</label>
+                        <select id="modalBranch"
+                            class="w-full bg-white border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-brand-green">
+                            <option value="Main HQ Yogyakarta">Main HQ - Sleman, Yogyakarta</option>
+                            <option value="Tangerang Forest Hub">Tangerang Forest Hub (Banten)</option>
+                            <option value="Anyer Coastal Station">Anyer Coastal Station (Banten)</option>
+                            <option value="Mount Karang Basecamp">Mount Karang Basecamp (Banten)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Customer Details -->
+                <div class="space-y-3 pt-2 border-t border-gray-100">
+                    <h5 class="text-xs font-bold text-gray-900 uppercase tracking-wider text-brand-green">Renter
+                        Information</h5>
+                    <div class="grid sm:grid-cols-2 gap-3">
+                        <input type="text" id="custName" placeholder="Full Name" required
+                            class="bg-white border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-brand-green">
+                        <input type="tel" id="custPhone" placeholder="WhatsApp Number" required
+                            class="bg-white border border-gray-200 rounded-xl px-3.5 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-brand-green">
+                    </div>
+                </div>
+
+                <!-- Real-time Cost Breakdown Box -->
+                <div class="bg-emerald-50/60 p-4 rounded-2xl border border-emerald-200 space-y-2">
+                    <div class="flex justify-between text-xs text-gray-600">
+                        <span>Daily Rate:</span>
+                        <span id="summaryDailyRate" class="font-bold">Rp 0</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-600">
+                        <span>Duration & Quantity:</span>
+                        <span id="summaryDays" class="font-bold">1 Day(s) x 1 Unit</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-600">
+                        <span>Sanitization Fee:</span>
+                        <span class="text-brand-green font-bold">Included Free</span>
+                    </div>
+                    <div
+                        class="border-t border-emerald-200 pt-2 flex justify-between items-center text-sm font-extrabold text-gray-900">
+                        <span>Estimated Total:</span>
+                        <span id="summaryTotal" class="text-lg text-brand-green">Rp 0</span>
+                    </div>
+                </div>
+
+                <!-- Direct WhatsApp Submit Button -->
+                <button type="submit"
+                    class="w-full py-4 rounded-2xl bg-brand-green hover:bg-brand-green-hover text-white font-black text-xs uppercase tracking-wider shadow-soft-green hover:scale-[1.01] transition-all flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Send Booking Order via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 10 Detailed Outdoor Rental Equipment Units Data
+        const gearData = [
+            {
+                id: 1,
+                name: "4-Person Waterproof Expedition Tent",
+                category: "tents",
+                price: 75000,
+                priceFormatted: "Rp 75.000",
+                img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "4 Adults + Bags",
+                    weight: "3.8 kg",
+                    protection: "3000mm PU Shield",
+                    material: "Ripstop Nylon"
+                },
+                badge: "Top Rated"
+            },
+            {
+                id: 2,
+                name: "Ultra-Lightweight Backpack (65L)",
+                category: "backpacks",
+                price: 50000,
+                priceFormatted: "Rp 50.000",
+                img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "65L + 10L Extra",
+                    weight: "1.4 kg",
+                    protection: "Includes Cover",
+                    material: "Cordura 420D"
+                },
+                badge: "Ultralight"
+            },
+            {
+                id: 3,
+                name: "Dual-Burner Portable Camp Stove",
+                category: "cooking",
+                price: 45000,
+                priceFormatted: "Rp 45.000",
+                img: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "2 Burners",
+                    weight: "1.2 kg",
+                    protection: "Wind Shield",
+                    material: "Stainless Steel"
+                },
+                badge: "Kitchen"
+            },
+            {
+                id: 4,
+                name: "Zero-Degree Mummy Sleeping Bag",
+                category: "tents",
+                price: 40000,
+                priceFormatted: "Rp 40.000",
+                img: "https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "Single Adult",
+                    weight: "950g",
+                    protection: "DWR Coated",
+                    material: "Goose Down"
+                },
+                badge: "Cozy Night"
+            },
+            {
+                id: 5,
+                name: "Trekking Poles (Carbon Fiber Pair)",
+                category: "backpacks",
+                price: 25000,
+                priceFormatted: "Rp 25.000",
+                img: "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "65cm - 135cm",
+                    weight: "420g / Pair",
+                    protection: "Anti-Shock",
+                    material: "Carbon Fiber"
+                },
+                badge: "Trail Helper"
+            },
+            {
+                id: 6,
+                name: "High-Lumen Rechargeable Headlamp",
+                category: "electronics",
+                price: 20000,
+                priceFormatted: "Rp 20.000",
+                img: "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "1200 Lumens",
+                    weight: "110g",
+                    protection: "IPX8 Waterproof",
+                    material: "Aluminum Body"
+                },
+                badge: "Night Bright"
+            },
+            {
+                id: 7,
+                name: "Portable Power Station (500W)",
+                category: "electronics",
+                price: 120000,
+                priceFormatted: "Rp 120.000",
+                img: "https://images.unsplash.com/photo-1628135889337-b6780dfe4214?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "140,000mAh",
+                    weight: "5.5 kg",
+                    protection: "Overheat Safe",
+                    material: "LiFePO4 Cells"
+                },
+                badge: "High Power"
+            },
+            {
+                id: 8,
+                name: "Insulated Camping Cooler (45L)",
+                category: "cooking",
+                price: 60000,
+                priceFormatted: "Rp 60.000",
+                img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "45 Liters",
+                    weight: "8.2 kg",
+                    protection: "5-Day Ice Hold",
+                    material: "Rotomolded"
+                },
+                badge: "Cool Fresh"
+            },
+            {
+                id: 9,
+                name: "Foldable Camp Table & Chair Set",
+                category: "tents",
+                price: 55000,
+                priceFormatted: "Rp 55.000",
+                img: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "Table + 4 Chairs",
+                    weight: "4.5 kg",
+                    protection: "Weather Resistant",
+                    material: "600D Oxford"
+                },
+                badge: "Camp Lounge"
+            },
+            {
+                id: 10,
+                name: "Hydration Pack & Water Purifier Kit",
+                category: "cooking",
+                price: 35000,
+                priceFormatted: "Rp 35.000",
+                img: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80",
+                specs: {
+                    capacity: "3L Bladder",
+                    weight: "350g",
+                    protection: "UV Purifier",
+                    material: "BPA-Free TPU"
+                },
+                badge: "Fresh Water"
+            }
+        ];
+
+        let selectedGear = null;
+
+        // Render Gear Cards
+        function renderGear(items) {
+            const container = document.getElementById('gearContainer');
+            container.innerHTML = '';
+
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "glass-card-light rounded-3xl overflow-hidden hover:border-brand-green transition-all duration-300 flex flex-col justify-between group shadow-card-glow bg-white";
+
+                card.innerHTML = `
+                    <div>
+                        <!-- Image Container -->
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-md text-emerald-950 text-[11px] font-extrabold uppercase rounded-lg border border-emerald-200 shadow-sm">
+                                ${item.badge}
+                            </div>
+                            <div class="absolute bottom-3 right-3 px-3.5 py-1 bg-brand-green text-white text-xs font-black rounded-xl shadow-soft-green">
+                                ${item.priceFormatted} <span class="text-[10px] font-normal">/ day</span>
+                            </div>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6">
+                            <h3 class="text-lg font-extrabold text-gray-900 mb-3 group-hover:text-brand-green transition-colors">${item.name}</h3>
+
+                            <!-- Specs Grid -->
+                            <div class="grid grid-cols-2 gap-2 text-[11px] text-gray-700 mb-2">
+                                <div class="bg-emerald-50/80 p-2 rounded-xl border border-emerald-100">
+                                    <span class="text-gray-500 block text-[9px] uppercase font-bold">Capacity</span>
+                                    <strong>${item.specs.capacity}</strong>
+                                </div>
+                                <div class="bg-emerald-50/80 p-2 rounded-xl border border-emerald-100">
+                                    <span class="text-gray-500 block text-[9px] uppercase font-bold">Weight</span>
+                                    <strong>${item.specs.weight}</strong>
+                                </div>
+                                <div class="bg-emerald-50/80 p-2 rounded-xl border border-emerald-100">
+                                    <span class="text-gray-500 block text-[9px] uppercase font-bold">Protection</span>
+                                    <strong>${item.specs.protection}</strong>
+                                </div>
+                                <div class="bg-emerald-50/80 p-2 rounded-xl border border-emerald-100">
+                                    <span class="text-gray-500 block text-[9px] uppercase font-bold">Material</span>
+                                    <strong>${item.specs.material}</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Actions -->
+                    <div class="px-6 pb-6 pt-0 space-y-2">
+                        <button onclick="openBookingModal(${item.id})" class="w-full py-3 rounded-xl bg-brand-green hover:bg-brand-green-hover text-white font-extrabold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-soft-green">
+                            <i data-lucide="calculator" class="w-4 h-4"></i>
+                            Calculate & Rent
+                        </button>
+                        <a href="https://wa.me/6285208990812?text=${encodeURIComponent(`Hello NatureBound Rentals, I want to rent the unit: ${item.name} (${item.priceFormatted}/day). Is it available?`)}" 
+                           target="_blank" 
+                           class="w-full py-2.5 rounded-xl bg-emerald-100 hover:bg-emerald-200 text-brand-green font-bold text-xs flex items-center justify-center gap-1.5 border border-emerald-200 transition-colors">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Direct WA Inquiry
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        }
+
+        // Filter Categories
+        function filterCategory(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-cat') === category) {
+                    btn.className = "filter-btn active px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all bg-brand-green text-white shadow-soft-green";
+                } else {
+                    btn.className = "filter-btn px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all bg-white text-gray-700 hover:text-brand-green border border-emerald-200";
+                }
+            });
+
+            if (category === 'all') {
+                renderGear(gearData);
+            } else {
+                const filtered = gearData.filter(g => g.category === category);
+                renderGear(filtered);
+            }
+        }
+
+        // Trigger Quick Search from Hero
+        function triggerQuickSearch() {
+            const catSelect = document.getElementById('heroCategorySelect').value;
+            filterCategory(catSelect);
+            document.getElementById('gear').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Modal Controls & Calendar Dynamic Calculator
+        function openBookingModal(gearId) {
+            selectedGear = gearData.find(g => g.id === gearId);
+            if (!selectedGear) return;
+
+            document.getElementById('modalGearImg').src = selectedGear.img;
+            document.getElementById('modalGearTitle').innerText = selectedGear.name;
+            document.getElementById('modalGearCategory').innerText = selectedGear.category;
+            document.getElementById('modalGearPrice').innerText = selectedGear.priceFormatted;
+
+            // Default dates: Today & 2 days later
+            const today = new Date();
+            const future = new Date();
+            future.setDate(today.getDate() + 2);
+
+            document.getElementById('modalStartDate').value = today.toISOString().split('T')[0];
+            document.getElementById('modalEndDate').value = future.toISOString().split('T')[0];
+            document.getElementById('modalQty').value = 1;
+
+            calculateTotal();
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function calculateTotal() {
+            if (!selectedGear) return;
+
+            const startVal = document.getElementById('modalStartDate').value;
+            const endVal = document.getElementById('modalEndDate').value;
+            const qty = parseInt(document.getElementById('modalQty').value) || 1;
+
+            let days = 1;
+            if (startVal && endVal) {
+                const d1 = new Date(startVal);
+                const d2 = new Date(endVal);
+                const diffTime = d2 - d1;
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                days = diffDays > 0 ? diffDays : 1;
+            }
+
+            const totalPrice = selectedGear.price * days * qty;
+
+            document.getElementById('summaryDailyRate').innerText = selectedGear.priceFormatted;
+            document.getElementById('summaryDays').innerText = `${days} Day(s) x ${qty} Unit(s)`;
+            document.getElementById('summaryTotal').innerText = `Rp ${totalPrice.toLocaleString('id-ID')}`;
+        }
+
+        // Process Checkout - Opens WhatsApp with pre-filled detailed message
+        function processCheckout() {
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const branch = document.getElementById('modalBranch').value;
+            const startDate = document.getElementById('modalStartDate').value;
+            const endDate = document.getElementById('modalEndDate').value;
+            const qty = document.getElementById('modalQty').value;
+            const total = document.getElementById('summaryTotal').innerText;
+
+            const waMsg = `Hello NatureBound Rentals!%0A%0AI would like to submit a gear rental order:%0A- Name: ${encodeURIComponent(name)}%0A- Phone: ${encodeURIComponent(phone)}%0A- Equipment: ${encodeURIComponent(selectedGear.name)}%0A- Quantity: ${qty} Unit(s)%0A- Dates: ${startDate} to ${endDate}%0A- Pick-up Hub: ${encodeURIComponent(branch)}%0A- Estimated Total: ${encodeURIComponent(total)}%0A%0APlease confirm availability!`;
+
+            window.open(`https://wa.me/6285208990812?text=${waMsg}`, '_blank');
+            closeModal();
+        }
+
+        // Page Onload Init
+        window.onload = function () {
+            renderGear(gearData);
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        };
+    </script>
+
+    <!-- Floating AI Chatbot Container -->
+    <div id="floatingChatContainer" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <!-- Floating Chat Window -->
+        <div id="floatingChatWidget"
+            class="hidden mb-4 w-[92vw] sm:w-[400px] h-[540px] max-h-[82vh] bg-white rounded-3xl shadow-2xl border border-emerald-100 flex-col overflow-hidden transition-all duration-300 ease-out">
+            <!-- Header -->
+            <div
+                class="bg-gradient-to-r from-emerald-600 via-teal-700 to-emerald-800 text-white p-4 flex items-center justify-between shadow-md">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20">
+                        <i data-lucide="bot" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-bold text-sm tracking-wide">NatureBound AI</h3>
+                            <span
+                                class="inline-flex items-center gap-1 text-[10px] bg-emerald-400/20 text-emerald-200 px-2 py-0.5 rounded-full font-semibold border border-emerald-400/30">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online
+                            </span>
+                        </div>
+                        <p class="text-xs text-emerald-100/80">Outdoor Assistant & Guide</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1">
+                    <button type="button" id="closeChatBtn"
+                        class="p-1.5 hover:bg-white/20 rounded-xl transition-colors text-white/90 hover:text-white cursor-pointer"
+                        title="Tutup Chat">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Messages Box -->
+            <div id="widgetChatBox" class="flex-1 overflow-y-auto p-4 space-y-3 bg-slate-50 text-sm">
+                <!-- Messages appended dynamically -->
+            </div>
+
+            <!-- Quick Suggestions -->
+            <div id="widgetQuickChips"
+                class="px-3 py-2 bg-slate-50 border-t border-slate-100 flex gap-1.5 overflow-x-auto text-[11px] whitespace-nowrap">
+                <button type="button"
+                    class="quick-chip px-2.5 py-1 rounded-full bg-white border border-emerald-200 text-emerald-800 hover:bg-emerald-50 transition-colors cursor-pointer"
+                    data-prompt="Apa saja pilihan tenda camping yang tersedia?">⛺ Pilihan Tenda</button>
+                <button type="button"
+                    class="quick-chip px-2.5 py-1 rounded-full bg-white border border-emerald-200 text-emerald-800 hover:bg-emerald-50 transition-colors cursor-pointer"
+                    data-prompt="Berapa biaya jasa guide pemandu gunung?">🧭 Jasa Guide</button>
+                <button type="button"
+                    class="quick-chip px-2.5 py-1 rounded-full bg-white border border-emerald-200 text-emerald-800 hover:bg-emerald-50 transition-colors cursor-pointer"
+                    data-prompt="Di mana saja lokasi hub cabang NatureBound Rentals?">📍 Lokasi Hub</button>
+            </div>
+
+            <!-- Input Form -->
+            <form id="widgetChatForm" class="p-3 bg-white border-t border-gray-100 flex items-center gap-2">
+                <input type="text" id="widgetUserInput" placeholder="Tanya seputar sewa alat & guide..."
+                    autocomplete="off" required
+                    class="flex-1 text-sm px-4 py-2.5 bg-slate-100 focus:bg-white rounded-xl border border-transparent focus:border-emerald-500 focus:outline-none transition-all placeholder-gray-400" />
+                <button type="submit" id="widgetSendBtn"
+                    class="p-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold transition-all shadow-sm hover:scale-105 disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center cursor-pointer">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Floating Toggle Button -->
+        <button id="floatingChatBtn" type="button"
+            class="flex items-center gap-2.5 px-5 py-3.5 bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-extrabold text-sm rounded-full shadow-2xl hover:scale-105 hover:shadow-emerald-500/50 transition-all border border-emerald-400/30 group cursor-pointer"
+            title="Tanya Gemini AI Chatbot">
+            <span class="relative flex h-3 w-3">
+                <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+            </span>
+            <i data-lucide="message-square" id="floatingChatIcon"
+                class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+            <span id="floatingChatText">Tanya AI Chatbot</span>
+        </button>
+    </div>
+
+    <!-- Floating Chatbot Script -->
+    <script>
+        (function () {
+            const floatingBtn = document.getElementById('floatingChatBtn');
+            const chatWidget = document.getElementById('floatingChatWidget');
+            const closeBtn = document.getElementById('closeChatBtn');
+            const chatBox = document.getElementById('widgetChatBox');
+            const chatForm = document.getElementById('widgetChatForm');
+            const chatInput = document.getElementById('widgetUserInput');
+            const sendBtn = document.getElementById('widgetSendBtn');
+            const floatingText = document.getElementById('floatingChatText');
+            const quickChips = document.querySelectorAll('.quick-chip');
+
+            const API_URL = 'http://localhost:3000/api/chat';
+            const conversation = [];
+            let isWidgetOpen = false;
+            let greetingShown = false;
+
+            function formatMarkdown(text) {
+                if (!text) return '';
+                let escaped = text
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;');
+
+                // Parse Markdown Tables to styled HTML Table
+                const tableRegex = /((?:\|[^\n\r]+\|\r?\n?)+)/g;
+                escaped = escaped.replace(tableRegex, (match) => {
+                    const lines = match.trim().split(/\r?\n/).filter(l => l.trim().startsWith('|'));
+                    if (lines.length < 2) return match;
+
+                    let html = '<div class="overflow-x-auto my-2 rounded-xl border border-emerald-100 shadow-sm"><table class="w-full text-xs text-left border-collapse bg-white">';
+                    let isHeader = true;
+
+                    for (let i = 0; i < lines.length; i++) {
+                        const line = lines[i].trim();
+                        if (/^\|[-:\s|]+$/.test(line)) {
+                            isHeader = false;
+                            continue;
+                        }
+
+                        const cells = line.split('|').slice(1, -1).map(c => c.trim());
+                        if (isHeader) {
+                            html += '<thead class="bg-emerald-600 text-white font-semibold"><tr>';
+                            cells.forEach(c => html += `<th class="px-2.5 py-1.5 border-b border-emerald-700 whitespace-nowrap">${c}</th>`);
+                            html += '</tr></thead><tbody>';
+                        } else {
+                            html += '<tr class="border-b border-gray-100 last:border-0 hover:bg-emerald-50/40">';
+                            cells.forEach(c => html += `<td class="px-2.5 py-1.5 text-gray-700 whitespace-nowrap">${c}</td>`);
+                            html += '</tr>';
+                        }
+                    }
+                    html += '</tbody></table></div>';
+                    return html;
+                });
+
+                return escaped
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+            }
+
+            function appendMessage(sender, text) {
+                const wrapper = document.createElement('div');
+                wrapper.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+
+                const bubble = document.createElement('div');
+                if (sender === 'user') {
+                    bubble.className = 'bg-emerald-600 text-white rounded-2xl rounded-br-none px-4 py-2.5 max-w-[85%] shadow-sm text-sm break-words whitespace-pre-wrap';
+                    bubble.innerHTML = formatMarkdown(text);
+                } else {
+                    bubble.className = 'bg-white text-gray-800 border border-gray-200/80 rounded-2xl rounded-bl-none px-4 py-2.5 max-w-[88%] shadow-sm text-sm break-words whitespace-pre-wrap leading-relaxed';
+                    bubble.innerHTML = formatMarkdown(text);
+                }
+
+                wrapper.appendChild(bubble);
+                chatBox.appendChild(wrapper);
+                chatBox.scrollTop = chatBox.scrollHeight;
+                return wrapper;
+            }
+
+            function showLoadingIndicator() {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'flex justify-start';
+                wrapper.id = 'chatLoadingIndicator';
+                wrapper.innerHTML = `
+                    <div class="bg-white text-emerald-700 border border-emerald-100 rounded-2xl rounded-bl-none px-4 py-2.5 shadow-sm text-sm flex items-center gap-2">
+                        <span class="flex gap-1">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-bounce"></span>
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-bounce [animation-delay:0.2s]"></span>
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-bounce [animation-delay:0.4s]"></span>
+                        </span>
+                        <span class="text-xs text-gray-500">Gemini sedang mengetik...</span>
+                    </div>
+                `;
+                chatBox.appendChild(wrapper);
+                chatBox.scrollTop = chatBox.scrollHeight;
+                return wrapper;
+            }
+
+            function initGreeting() {
+                if (!greetingShown) {
+                    greetingShown = true;
+                    appendMessage(
+                        'bot',
+                        'Halo Kak! 👋 Ada yang bisa kami bantu seputar unit rental, tarif sewa, atau jasa guide hari ini? Tanya aja, siap bantu rekomendasi terbaik! ✨'
+                    );
+                }
+            }
+
+            function toggleChatWidget(open) {
+                if (typeof open === 'boolean') {
+                    isWidgetOpen = open;
+                } else {
+                    isWidgetOpen = !isWidgetOpen;
+                }
+
+                if (isWidgetOpen) {
+                    chatWidget.classList.remove('hidden');
+                    chatWidget.classList.add('flex');
+                    floatingText.textContent = 'Tutup Chat';
+                    initGreeting();
+                    setTimeout(() => chatInput.focus(), 150);
+                } else {
+                    chatWidget.classList.add('hidden');
+                    chatWidget.classList.remove('flex');
+                    floatingText.textContent = 'Tanya AI Chatbot';
+                }
+
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+            }
+
+            window.openFloatingChat = function (e) {
+                if (e) e.preventDefault();
+                toggleChatWidget(true);
+            };
+
+            if (floatingBtn) {
+                floatingBtn.addEventListener('click', () => toggleChatWidget());
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => toggleChatWidget(false));
+            }
+
+            quickChips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    const prompt = chip.getAttribute('data-prompt');
+                    if (prompt) {
+                        chatInput.value = prompt;
+                        chatForm.dispatchEvent(new Event('submit'));
+                    }
+                });
+            });
+
+            chatForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const userMsg = chatInput.value.trim();
+                if (!userMsg) return;
+
+                appendMessage('user', userMsg);
+                conversation.push({ role: 'user', text: userMsg });
+
+                chatInput.value = '';
+                chatInput.disabled = true;
+                sendBtn.disabled = true;
+
+                const loader = showLoadingIndicator();
+
+                try {
+                    const res = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ conversation })
+                    });
+
+                    if (!res.ok) {
+                        const errJson = await res.json().catch(() => ({}));
+                        throw new Error(errJson.message || 'Server error (' + res.status + ')');
+                    }
+
+                    const data = await res.json();
+                    const botReply = data.result || 'Maaf, tidak ada jawaban dari server.';
+
+                    loader.remove();
+                    appendMessage('bot', botReply);
+                    conversation.push({ role: 'bot', text: botReply });
+                } catch (err) {
+                    console.error(err);
+                    loader.remove();
+                    appendMessage('bot', '⚠️ Terjadi kendala: ' + (err.message || 'Gagal menghubungi server') + '. Pastikan backend di port 3000 sedang aktif.');
+                } finally {
+                    chatInput.disabled = false;
+                    sendBtn.disabled = false;
+                    chatInput.focus();
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
